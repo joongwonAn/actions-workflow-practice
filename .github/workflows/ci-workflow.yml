@@ -4,7 +4,7 @@ name: CI Workflow
 on:
   push:
     branches:
-      - "main"
+      - "dev"
 
 # 수행할 작업 설정
 jobs:
