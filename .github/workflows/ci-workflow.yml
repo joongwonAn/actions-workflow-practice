@@ -21,3 +21,7 @@ jobs:
         run: chmod +x ./gradlew
       - name: 빌드 및 테스트
         run: ./gradlew clean build
+
+      - name: Docker 빌드
+        run: |
+          docker build -t my-app-repo:latest .

@@ -3,7 +3,7 @@ name: AWS Connection && actions secret Test
 on:
   push:
     branches:
-      - "main"
+      - "dev"
 
 jobs:
   test:
