@@ -31,6 +31,9 @@ jobs:
             | docker login --username AWS --password-stdin \
               ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
 
+      - name: Gradle build
+        run: ./gradlew clean build
+
       # (선택) 이미지 태그 구성: 커밋 해시 7자리 + latest
       - name: Prepare tags
         id: prep
