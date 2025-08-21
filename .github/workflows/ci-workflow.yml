@@ -1,0 +1,20 @@
+name: CI Workflow
+
+# 실행 조건
+on:
+  push:
+    branches:
+      - "main"
+
+# 수행할 작업 설정
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: JDK 17 설정
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+      - name: 빌드 및 테스트
+        run: ./gradlew clean build
